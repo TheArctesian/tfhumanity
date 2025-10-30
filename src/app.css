@@ -1,1 +1,240 @@
 @import 'tailwindcss';
+
+/* Pale Blue Dot Design System - CSS Custom Properties */
+
+:root {
+	/* Colors - Void (Space & Deep Backgrounds) */
+	--color-void-50: #e6e8f0;
+	--color-void-100: #bdc2d9;
+	--color-void-200: #9099bf;
+	--color-void-300: #6370a5;
+	--color-void-400: #414f91;
+	--color-void-500: #1a2e7d;
+	--color-void-600: #162975;
+	--color-void-700: #0f226a;
+	--color-void-800: #0a1c5f;
+	--color-void-900: #060f4a;
+	--color-void-950: #030718;
+	--color-void-pure: #000000;
+
+	/* Colors - Cosmic Blue (Pale Blue Dot) */
+	--color-cosmic-50: #e8f4ff;
+	--color-cosmic-100: #d4e9ff;
+	--color-cosmic-200: #b0d7ff;
+	--color-cosmic-300: #7bbfff;
+	--color-cosmic-400: #4a9eff;
+	--color-cosmic-500: #1a7eff;
+	--color-cosmic-600: #0062ff;
+	--color-cosmic-700: #004eff;
+	--color-cosmic-800: #0041d0;
+	--color-cosmic-900: #003ba3;
+	--color-cosmic-950: #002563;
+
+	/* Colors - Nebula (Cosmic Purples) */
+	--color-nebula-50: #f5f3ff;
+	--color-nebula-100: #ede9fe;
+	--color-nebula-200: #ddd6fe;
+	--color-nebula-300: #c4b5fd;
+	--color-nebula-400: #a78bfa;
+	--color-nebula-500: #8b5cf6;
+	--color-nebula-600: #7c3aed;
+	--color-nebula-700: #6d28d9;
+	--color-nebula-800: #5b21b6;
+	--color-nebula-900: #4c1d95;
+	--color-nebula-950: #2d1b4e;
+
+	/* Colors - Sunray (Warm Accents) */
+	--color-sunray-50: #fff7ed;
+	--color-sunray-100: #ffedd5;
+	--color-sunray-200: #fed7aa;
+	--color-sunray-300: #fdb574;
+	--color-sunray-400: #ffa94d;
+	--color-sunray-500: #fb923c;
+	--color-sunray-600: #f97316;
+	--color-sunray-700: #ea580c;
+	--color-sunray-800: #c2410c;
+	--color-sunray-900: #9a3412;
+	--color-sunray-950: #7c2d12;
+
+	/* Colors - Starlight (Bright Highlights) */
+	--color-starlight-50: #ffffff;
+	--color-starlight-100: #fafafa;
+	--color-starlight-200: #f5f5f5;
+	--color-starlight-300: #e8f4ff;
+	--color-starlight-400: #dbeafe;
+	--color-starlight-500: #bfdbfe;
+	--color-starlight-600: #93c5fd;
+	--color-starlight-700: #60a5fa;
+	--color-starlight-800: #3b82f6;
+	--color-starlight-900: #2563eb;
+
+	/* Typography */
+	--font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+		sans-serif;
+	--font-mono: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New',
+		monospace;
+	--font-display: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+	/* Spacing */
+	--spacing-xs: 0.25rem;
+	--spacing-sm: 0.5rem;
+	--spacing-md: 1rem;
+	--spacing-lg: 1.5rem;
+	--spacing-xl: 2rem;
+	--spacing-2xl: 3rem;
+	--spacing-3xl: 4rem;
+
+	/* Border Radius */
+	--radius-sm: 0.125rem;
+	--radius-base: 0.25rem;
+	--radius-md: 0.375rem;
+	--radius-lg: 0.5rem;
+	--radius-xl: 0.75rem;
+	--radius-2xl: 1rem;
+	--radius-3xl: 1.5rem;
+	--radius-full: 9999px;
+
+	/* Shadows */
+	--shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+	--shadow-base: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+	--shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+	--shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+	--shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+	--shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+	--shadow-glow: 0 0 20px rgba(74, 158, 255, 0.5);
+	--shadow-glow-lg: 0 0 40px rgba(74, 158, 255, 0.6);
+	--shadow-cosmic: 0 0 60px rgba(74, 158, 255, 0.3), 0 0 100px rgba(139, 92, 246, 0.2);
+
+	/* Animations */
+	--duration-fast: 150ms;
+	--duration-base: 300ms;
+	--duration-slow: 500ms;
+	--duration-slower: 1000ms;
+
+	--easing-linear: linear;
+	--easing-in: cubic-bezier(0.4, 0, 1, 1);
+	--easing-out: cubic-bezier(0, 0, 0.2, 1);
+	--easing-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Global Styles */
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: var(--font-sans);
+	background: linear-gradient(to bottom, var(--color-void-pure), var(--color-void-900));
+	color: var(--color-starlight-500);
+	min-height: 100vh;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+	width: 12px;
+}
+
+::-webkit-scrollbar-track {
+	background: var(--color-void-900);
+}
+
+::-webkit-scrollbar-thumb {
+	background: var(--color-cosmic-700);
+	border-radius: var(--radius-full);
+	border: 2px solid var(--color-void-900);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: var(--color-cosmic-600);
+}
+
+/* Selection */
+::selection {
+	background: var(--color-cosmic-400);
+	color: var(--color-starlight-50);
+}
+
+::-moz-selection {
+	background: var(--color-cosmic-400);
+	color: var(--color-starlight-50);
+}
+
+/* Focus visible styles */
+:focus-visible {
+	outline: 2px solid var(--color-cosmic-400);
+	outline-offset: 2px;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	color: var(--color-starlight-300);
+	font-weight: 600;
+	line-height: 1.3;
+}
+
+/* Links */
+a {
+	color: var(--color-cosmic-400);
+	text-decoration: none;
+	transition: color var(--duration-base) var(--easing-out);
+}
+
+a:hover {
+	color: var(--color-cosmic-300);
+}
+
+/* Code */
+code {
+	font-family: var(--font-mono);
+	background: rgba(26, 46, 125, 0.3);
+	padding: 0.125rem 0.375rem;
+	border-radius: var(--radius-base);
+	font-size: 0.875em;
+}
+
+pre {
+	font-family: var(--font-mono);
+	background: rgba(26, 46, 125, 0.3);
+	padding: 1rem;
+	border-radius: var(--radius-lg);
+	overflow-x: auto;
+	border: 1px solid rgba(74, 158, 255, 0.2);
+}
+
+pre code {
+	background: none;
+	padding: 0;
+}
+
+/* Utility Classes */
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 1rem;
+}
+
+.section {
+	padding: 4rem 0;
+}
+
+.text-gradient {
+	background: linear-gradient(135deg, var(--color-cosmic-400), var(--color-nebula-400));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+}
